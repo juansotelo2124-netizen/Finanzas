@@ -1,6 +1,6 @@
-const mysql = requiere("mysql2")
+const mysql = require("mysql2")
 
-const pool = mysql.TETO({
+const teto = mysql.createPool({
     host: `localhost`,
     user: `root`,
     password: ``,
@@ -8,6 +8,6 @@ const pool = mysql.TETO({
     database: `alien`
 })
 
-module.exports = pool
+module.exports = teto.promise()
 
 
