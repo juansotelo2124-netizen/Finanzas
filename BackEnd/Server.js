@@ -1,12 +1,11 @@
 
-const express = requiere("express")
+const express = require("express")
+const router = require("./routes/router")
 const app = express()
 let port = 3000
 
-app.get("/",(req,res)=>( 
-    res.send("tests")
-))
+app.use("/api" , router)
 app.listen(port, ()=>{
-cosole.log(`CORRIENDO EN EL $(port)`)
+console.log(`CORRIENDO EN EL ${port}`)
 
 })
