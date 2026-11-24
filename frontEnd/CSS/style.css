@@ -63,7 +63,7 @@ label{
     gap: 10px;
     width: 460px;
 }
-.hijo2{
+#hijo2{
     background-image: url("https://i.pinimg.com/originals/f5/03/0b/f5030bb0c809cc8c71aaa2bb987e7ae5.gif");
     background-repeat: no-repeat;
     background-size: 450px 200px;
@@ -74,6 +74,7 @@ label{
     gap: 20px;
     width: 460px;
     padding: 10px;
+    height: auto;
 }
 .sp{
     display: flex;
@@ -89,7 +90,7 @@ label{
     justify-content: space-between ;
     background: linear-gradient(180deg,rgb(4, 116, 0), rgb(171, 255, 4),rgb(166, 237, 1));
     padding: 10px, 10px;
-    height: 50px;
+    height: auto;
 }
 .sp2{
     display: flex;
@@ -104,16 +105,19 @@ input{
     border-radius: 50px;
     margin-top: 10px;
 }
-.ingreso{
+#ingreso{
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
     font-style: normal;
     color:#00ff00
 }
-.gasto{
+#gasto{
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
     font-style: normal;
-    color:#ff0800
+    color:#ff0800;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
 }
 

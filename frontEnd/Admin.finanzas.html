@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class ="padre">
@@ -19,13 +19,10 @@
             <label for="Monto2">Monto:</label>
             <input type="number" name="" id="Monto2" placeholder="Solo valores numericos : ">
 
-            <label for="Categoria : ">Categoria</label>
-            <select id="Categoria : ">
+            <label for="Categoria">Categoria</label>
+            <select id="Categoria">
             
-            <option value="">Comida </option>
-            <option value="">Transporte </option>
-            <option value="">Servicios </option>
-            <option value="">Salario </option>
+            
 
             </select>
             <label for="Fecha : ">Fecha : </label>
@@ -36,9 +33,9 @@
 
         <div class="hijo">
             <h2>Movimientos Resgistrados </h2>
-            <div class="hijo2">
+            <div id="hijo2">
                 <div class="sp">
-                <label class="Ingreso" for="Ingresos">Ingresos:</label>
+                <label id ="Ingreso" for="Ingresos">Ingresos:</label>
                 <span>$70.500</span>
                 <span>salario</span>
                 <button class="boton">Eliminar</button>
@@ -46,9 +43,8 @@
                 </div>
 
                 <div class="sp1">
-                <label class="gasto" for="gastos">Gastos:</label>
-                <span>$222.500</span>
-                <span>Impuestos</span>
+                <label id="gasto" for="gastos">Gastos:</label>
+              
                 <button class="boton">Eliminar</button>
                 <button class="boton">Editar</button>
                 </div>
@@ -57,6 +53,6 @@
             </div>
         </div>
     </div>
-    <script src="js/juego.js"></script>
+    <script src="js/finanzas.js"></script>
 </body>
 </html>

@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node Server.js"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/m17400341-hue/AdminFinanzas.git"
@@ -17,11 +16,12 @@
   "license": "MIT",
   "type": "commonjs",
   "bugs": {
-  "url": "https://github.com/m17400341-hue/AdminFinanzas/issues"
+    "url": "https://github.com/m17400341-hue/AdminFinanzas/issues"
   },
   "homepage": "https://github.com/m17400341-hue/AdminFinanzas#readme",
   "dependencies": {
-  "express": "^5.3.0",
-  "mysql2": "^3.24.6"
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6"
   }
 }
