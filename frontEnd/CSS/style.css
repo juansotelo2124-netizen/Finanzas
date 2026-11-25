@@ -1,123 +1,184 @@
-:root{
-    --color-fondo: #00ff99;
-    --color-gasto: #ff0000;
-    --color-ingrso: #00ff2f;
+
+:root {
+    --color-fondo: #111827;
+    --color-panel: #1e293b;
+    --color-secundario: #334155;
+    --color-gasto: #ff4545;
+    --color-ingreso: #16c765;
+    --color-texto: #f8fafc;
 }
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-body{
-    background: linear-gradient(180deg,rgb(4, 116, 0), rgb(171, 255, 4),rgb(166, 237, 1));
+
+body {
+    background: linear-gradient(135deg, #111827, #0f172a);
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: var(--color-texto);
 }
-h1{
+
+/* Títulos */
+h1, h2 {
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
-    font-style: normal;
-    color:#f3f4e3
+    color: #f3f4f6;
+    text-align: center;
 }
-h2{
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color:#f3f4e3
+
+h2 {
+    margin-bottom: 20px;
 }
-span{
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color:#f3f4e3
+
+span, label {
+    font-family: Arial, sans-serif;
+    color: var(--color-texto);
 }
-.boton:hover{
-    background: linear-gradient(180deg,rgb(4, 116, 0), rgb(171, 255, 4),rgb(166, 237, 1));
-    
-}
-label{
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color:#f3f4e3
-}
-.padre{
-    border: 6px solid rgb(0, 0, 0);
-    padding: 8%;
-    border-radius: 10%;
-    margin-top: 5%;
-    flex-direction: column;
-    gap: 16px;
-    background-image: url("https://wallpapers.com/images/hd/ben-10-1280-x-800-picture-d1ad0d3l0vbdtzdr.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 80%;
-}
-.hijo{
+
+/* Panel principal */
+.padre {
+    border: 1px solid #334155;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px auto;
     display: flex;
     flex-direction: column;
-    border: 5xp solid black;
-    padding: 3%;
-    gap: 10px;
-    width: 460px;
-}
-#hijo2{
-    background-image: url("https://i.pinimg.com/originals/f5/03/0b/f5030bb0c809cc8c71aaa2bb987e7ae5.gif");
-    background-repeat: no-repeat;
-    background-size: 450px 200px;
-    display: flex;
-    flex-direction: column;
-    border: 5xp solid black;
-    padding: 3%;
     gap: 20px;
-    width: 460px;
-    padding: 10px;
+    background: #1e293b;
+    width: 80%;
+    max-width: 850px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedores */
+.hijo {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #334155;
+    padding: 20px;
+    gap: 15px;
+    width: 100%;
+    border-radius: 12px;
+    background: #1e293b;
+}
+
+#hijo2 {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 15px;
+    gap: 20px;
+    width: 100%;
     height: auto;
+    background: transparent;
 }
-.sp{
-    display: flex;
-    align-items: center;
-    justify-content: space-between ;
-    background: linear-gradient(180deg,rgb(4, 116, 0), rgb(171, 255, 4),rgb(166, 237, 1));
-    padding: 10px;
-    height: 50px;
+
+/* Botones */
+.boton {
+    background: #16b957;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
-.sp1{
-    display: flex;
-    align-items: center;
-    justify-content: space-between ;
-    background: linear-gradient(180deg,rgb(4, 116, 0), rgb(171, 255, 4),rgb(166, 237, 1));
-    padding: 10px, 10px;
-    height: auto;
+
+.boton:hover {
+    background: #0d9745;
+    transform: scale(1.03);
 }
-.sp2{
-    display: flex;
-    align-items: center;
-    justify-content: space-between ;
-    background-image: url("https://i.pinimg.com/originals/f5/03/0b/f5030bb0c809cc8c71aaa2bb987e7ae5.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    border: 5xp solid black;
-}
-input{
-    border-radius: 50px;
+
+/* Inputs */
+input {
+    background: #0f172a;
+    color: white;
+    border: 1px solid #475569;
+    border-radius: 10px;
+    padding: 13px;
     margin-top: 10px;
+    width: 100%;
+    outline: none;
 }
-#ingreso{
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color:#00ff00
+
+input:focus {
+    border-color: #16c765;
+    box-shadow: 0 0 5px rgba(22, 199, 101, 0.4);
 }
-#gasto{
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color:#ff0800;
+
+/* Movimientos */
+.sp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(22, 199, 101, 0.12);
+    border-left: 5px solid var(--color-ingreso);
+    padding: 15px;
+    min-height: 80px;
+    border-radius: 12px;
+    gap: 10px;
+}
+
+.sp1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 69, 69, 0.12);
+    border-left: 5px solid var(--color-gasto);
+    padding: 15px;
+    min-height: 80px;
+    border-radius: 12px;
+    gap: 10px;
+}
+
+.sp2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #334155;
+    border: 1px solid #475569;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+/* Textos de ingresos y gastos */
+#ingreso {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #16c765;
+}
+
+#gasto {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #ff4545;
     height: auto;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 600px) {
+    .padre {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .sp, .sp1, .sp2 {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hijo, #hijo2 {
+        width: 100%;
+        padding: 10px;
+    }
 }
 
